@@ -15,6 +15,7 @@ In this assignment, you will build a simplified version of ELIZA, one of the ear
 But this assignment goes beyond just implementing a chatbot. You'll also analyze what makes ELIZA feel conversational despite its simplicity, compare it to modern chatbots, and reflect on the psychological phenomenon known as the "ELIZA effect"—the tendency for people to attribute human-like understanding to computer programs.
 
 This is your first assignment in the course, and it's designed to introduce you to fundamental concepts in natural language processing: pattern matching, text manipulation, rule-based systems, and the critical distinction between appearing intelligent and actually understanding language.
+
 ### Vibe coding is encouraged!
 
 For this assignment, it is *possible* to code everything from scratch in the allotted assignment time (1 week). However, I strongly recommend that you use a coding agent to help you implement the core components. Some suggestions are provided [below](#resources-and-references). If you're already familiar with vibe coding, then feel free to use whatever approach you're comfortable with. If you're new to vibe coding, or if you'd like to try something different, what works well for me is:
@@ -145,6 +146,7 @@ Chatbot: That will be $200. See you again next week.
 
 ### Implementation Requirements
 
+- **No hard-coded responses**: You're provided with an example [`instructions.txt`](instructions.txt) file. However you should read from the file to generate all of the messages, rules, and patterns *when you initialize a new instance of your chatbot*. Your code should be able to support other `instructions.txt` files as long as they follow the same syntax and formatting (even if the numbers of rules are different, the specific words are different, and so on).
 - **Initial and final messages**: These must be drawn from the predefined options in [`instructions.txt`](instructions.txt)
 - **Pre-substitutions, synonym handling, and post-substitutions**: Must be implemented according to the rules in [`instructions.txt`](instructions.txt)
 - **Pattern matching**: Must use the decomposition and reassembly rules from [`instructions.txt`](instructions.txt) to generate responses
@@ -171,13 +173,13 @@ e) **Emotional depth**: Explore a single topic in depth across multiple turns
 
 For each conversation:
 - Include the full transcript in your notebook
-- Analyze what worked and what didn't
+- Describe what worked and what didn't
 - Identify specific patterns that matched (or failed to match)
-- Note where ELIZA seems "intelligent" vs. where the illusion breaks
+- Describe where ELIZA seems "intelligent" vs. where the illusion breaks
 
 ### 2. The ELIZA Effect Analysis (Required)
 
-Reflect on the psychological aspects of interacting with ELIZA:
+Reflect on the psychological aspects of interacting with ELIZA (500-1000 words in total:
 
 a) **When does ELIZA feel human?**
    - What specific responses create the illusion of understanding?
@@ -196,7 +198,7 @@ c) **Modern parallels**
 
 ### 3. Pattern Analysis (Required)
 
-Analyze ELIZA's rule system:
+Analyze ELIZA's rule system (500-1000 words in total):
 
 a) **Pattern effectiveness**
    - Which patterns in `instructions.txt` are most useful?
@@ -215,26 +217,27 @@ c) **Substitution impact**
 
 ### 4. Comparison with Modern Chatbots (Required)
 
-Compare your ELIZA implementation with a modern chatbot:
+Compare your ELIZA implementation with a modern chatbot (500-1000 words in total, excluding conversation excerpts):
 
 a) **Choose a comparison system**
    - ChatGPT (or similar LLM-based chatbot)
    - A simple chatbot library (ChatterBot, Rasa, etc.)
    - Another student's enhanced ELIZA (if available)
+   - Another [demo model](https://context-lab.com/llm-course/demos/chatbot-evolution/) from this course
 
 b) **Side-by-side testing**
    - Use the same prompts with both systems
    - Compare response quality, coherence, and relevance
-   - Document at least 3 example conversations
+   - Document at least 3 example conversations (10+ turns each). Try to really find the limits of each model and *also* find what each model does especially well.
 
 c) **Analysis**
    - What capabilities does the modern system have that ELIZA lacks?
-   - Are there any scenarios where ELIZA performs comparably?
-   - What's needed to bridge the gap from ELIZA to modern chatbots?
+   - Are there any scenarios where ELIZA performs comparably well?
+   - What's needed to bridge the gap from ELIZA to modern chatbots?  E.g., if we could just be a bit more clever, or if we had enough time, could we (in principle) write down enough ELIZA-style rules to achieve performance comparable to today's best chatbots?  Or is something "more" needed? What do you think that *something* is?
 
 ## Part 3: Reflection and Insights (Required)
 
-Write a thoughtful reflection (500-1000 words) addressing:
+Write a thoughtful reflection (500-1000 words in total) addressing:
 
 1. **What is conversation?**
    - What does ELIZA reveal about the nature of conversation?
@@ -310,16 +313,16 @@ Document design decisions and performance improvements.
 Submit a **single Jupyter notebook** that includes:
 
 ### 1. Implementation (40%)
-- Complete, working ELIZA chatbot implementation
+- Complete, working ELIZA chatbot implementation following the template notebook
 - Clean, well-commented code
 - Proper handling of all rule types from `instructions.txt`
 - Markdown cells explaining your approach
 
 ### 2. Conversation Examples (20%)
-- At least 5 diverse conversation transcripts
-- Analysis of each conversation
+- High quality and diverse content covered in conversation transcripts
+- Analysis (reflection) about each conversation
 - Pattern matching explanations
-- Examples of successes and failures
+- Examples (and discussions) of successes and failures
 
 ### 3. Analysis (25%)
 - ELIZA effect analysis
@@ -328,7 +331,7 @@ Submit a **single Jupyter notebook** that includes:
 - Insights into why ELIZA works/fails
 
 ### 4. Reflection (10%)
-- Thoughtful 500-1000 word reflection
+- Thoughtful reflection
 - Addresses all required questions
 - Shows critical thinking about conversation and understanding
 - Connects to modern AI systems
@@ -399,6 +402,7 @@ Submit a **single Jupyter notebook** that includes:
 3. **Test incrementally**: Don't write everything at once—test each component separately
 4. **Use print statements**: Debug by printing what patterns match and why
 5. **Study `instructions.txt`**: Understand the format before parsing it
+6. **Learn from a reference implementation**: Use the [reference implementation](https://context-lab.com/llm-course/demos/eliza/) from our course, including the rule breakdown and rule editor tabs, to see how each component should behave.
 
 ### Common Pitfalls to Avoid
 
@@ -431,7 +435,7 @@ This assignment is designed to be completed in **one week (7 days)**. While subs
 
 - **Days 1-2**: Implement core ELIZA functionality (pattern matching, pre/post-substitutions, synonym handling, conversation loop)
 - **Days 3-4**: Conduct conversation testing and analysis (at least 5 diverse conversation scenarios, ELIZA effect analysis, pattern effectiveness analysis)
-- **Days 5-6**: Complete comparison with modern chatbots and write your reflection (500-1000 word reflection on key questions)
+- **Days 5-6**: Complete comparison with modern chatbots and write your reflections and discussions
 - **Day 7**: Polish your notebook, test it in a fresh Colab session, and prepare for submission
 
 **Key tip**: These phases can overlap! While implementing, you can begin testing. While analyzing, you can refine your implementation. The daily breakdown above represents the primary focus for each phase, but iterating and moving between phases is normal and expected. Start early in the week and test incrementally as you build each component.
@@ -444,16 +448,16 @@ This assignment is designed to be completed in **one week (7 days)**. While subs
    - [PDF Link](https://web.stanford.edu/class/cs124/p36-weizenabaum.pdf)
    - **Read this first!** It will help you understand the design and implementation
 
+### Additional Context
+
 2. **Weizenbaum, J. (1976)**. "Computer Power and Human Reason: From Judgment to Calculation"
    - [PDF Link](http://blogs.evergreen.edu/cpat/files/2013/05/Computer-Power-and-Human-Reason.pdf)
    - Weizenbaum's later reflections on ELIZA and AI ethics
    - Highly relevant to your reflection section
 
-### Additional Context
-
 3. **Hofstadter, D. (1995)**. "Fluid Concepts and Creative Analogies: Computer Models of the Fundamental Mechanisms of Thought"
    - [PDF Link](https://psycnet.apa.org/record/1995-98269-000)
-   - Chapter on the Copycat program and understanding vs. simulation
+   - Chapter on the copycat program and understanding vs. simulation
 
 4. **Turkle, S. (2011)**. "Alone Together: Why We Expect More from Technology and Less from Each Other"
    - [PDF Link](https://link.springer.com/article/10.1007/s10615-014-0511-4)
@@ -461,15 +465,14 @@ This assignment is designed to be completed in **one week (7 days)**. While subs
 
 ### Technical Resources
 
-- **ELIZA Online Implementations**: Try online versions to see expected behavior
+- **ELIZA Online Implementations**: Helpful for seeing expected behavior
   - [context-lab.com/llm-course/demos/eliza]](https://context-lab.com/llm-course/demos/eliza/)
-  - Useful for testing your implementation
 
 - **Google Colaboratory**: Setup-free resource for writing and running code on Google Cloud machines
   - [Link](https://colab.research.google.com/)
   - Your assignment **must** run in Google Colaboratory: to test it, press the "Run all" button, or select "Runtime" > "Run all" from the menu. Make sure that *all* parts of the notebook run without crashing before you submit!!
 
-- **Dartmouth GenAI**: Free access to powerful LLMs that can help with coding
+- **Dartmouth GenAI**: Free access to powerful LLMs that can help with coding (only for Dartmouth students, faculty, and staff)
   - [Link (requires Dartmouth NetID)](https://chat.dartmouth.edu/)
 
 - **OpenCode**: Command line interface for vibe coding
@@ -516,10 +519,23 @@ This assignment is designed to be completed in **one week (7 days)**. While subs
 This assignment is submitted via **GitHub Classroom**. Follow these steps:
 
 1. **Accept the assignment**: Click the [accept assignment link](https://classroom.github.com/a/SC1jeftp)
-   - This creates your own private repository for the assignment
+   - This creates your own private repository for the assignment (note the repository name!)
    - Template repository (your private version will be based on this template): [github.com/ContextLab/eliza-llm-course](https://github.com/ContextLab/eliza-llm-course)
 
-2. Click the "
+2. Click the notebook (`.ipynb` file) to view it in GitHub
+
+3. Click the "Open in Colab" badge at the top.  This will open a new Colaboratory session.
+
+4. Click the Copy to Drive button (at the top) to create an editable copy that you can work on.
+
+4. Make your edits to the notebook file in Google Colaboratory.
+
+5. Save your changes back to GitHub using File > Save a copy in GitHub:
+  - Select the repository for your assignment from the dropdown menu
+  - Change the File path to "Assignment1_ELIZA.ipynb" (i.e., remove the "Copy_of_" text at the beginning)
+  - Add a note to the Commit message field, or leave it as the default
+  - Make sure the "Include a link to Colab" box is checked
+  - Press the "OK" button. This will sync your changes back to your GitHub repository.
 
 5. **Verify submission**: Check that your latest commit appears in your GitHub repository before the deadline
 
@@ -529,7 +545,7 @@ This assignment is submitted via **GitHub Classroom**. Follow these steps:
 
 1. **Runtime**: The notebook must run from start to finish without errors in a fresh Colab session
 2. **Dependencies**: Include all imports and installations in the notebook
-3. **Data**: The `instructions.txt` file should be loaded in your notebook (upload to Colab or link to it)
+3. **Data**: The `instructions.txt` file should be loaded in your notebook (code for doing this is in the template notebook provided with the assignment)
 4. **Output**: Keep cell outputs visible in your submission
 7. **Deadline**: January 16, 2026 at 11:59PM EST
 
@@ -557,9 +573,9 @@ You are encouraged to:
 You must:
 - Write your own code and analysis (even if AI-assisted)
 - Understand every line of code you submit
-- Write your own reflection in your own words
+- Write your own reflection in your own words (do *not* use generative AI to write your reflections)
 - Cite any significant code snippets adapted from external sources
-- Submit original conversation examples and analysis
+- Submit original conversation examples and analysis (do *not* use generative AI to come up with your conversation examples)
 
 Violations of academic integrity will result in a failing grade for the assignment.
 
@@ -568,11 +584,11 @@ Violations of academic integrity will result in a failing grade for the assignme
 If you have questions about the assignment:
 1. Review this README and the Weizenbaum paper
 2. Check the Week 1 lecture materials
-3. Post in the course discussion forum
+3. Post in the course discussion forum on Discord
 4. Attend office hours
-5. Email the instructor/TA with specific questions
+5. Email me with specific questions
 
-Have fun exploring one of the most important programs in AI history!
+**Have fun exploring one of the most important programs in AI history**!
 
 ---
 
