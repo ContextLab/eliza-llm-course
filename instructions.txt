@@ -5,9 +5,6 @@ final: That will be $200.
 quit: bye
 quit: goodbye
 quit: quit
-quit: bye
-quit: goodbye
-quit: quit
 pre: dont don't
 pre: cant can't
 pre: wont won't
