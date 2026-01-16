@@ -2,7 +2,7 @@
 
 > **Accept this assignment:** [GitHub Classroom Link](https://classroom.github.com/a/SC1jeftp)
 >
-> **Due:** January 16, 2026 at 11:59 PM EST
+> **Due:** January 19, 2026 at 11:59 PM EST
 >
 > Click the link above to create your private repository for this assignment. Complete your work in Google Colab, then push your notebook to the repository before the deadline.
 
@@ -539,7 +539,7 @@ This assignment is submitted via **GitHub Classroom**. Follow these steps:
 
 5. **Verify submission**: Check that your latest commit appears in your GitHub repository before the deadline
 
-**Deadline**: January 16, 2026 at 11:59 PM EST
+**Deadline**: January 19, 2026 at 11:59 PM EST
 
 ### Notebook Requirements
 
@@ -547,7 +547,7 @@ This assignment is submitted via **GitHub Classroom**. Follow these steps:
 2. **Dependencies**: Include all imports and installations in the notebook
 3. **Data**: The `instructions.txt` file should be loaded in your notebook (code for doing this is in the template notebook provided with the assignment)
 4. **Output**: Keep cell outputs visible in your submission
-7. **Deadline**: January 16, 2026 at 11:59PM EST
+7. **Deadline**: January 19, 2026 at 11:59 PM EST
 
 ### Before Submission Checklist
 
